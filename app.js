@@ -44,9 +44,9 @@ app.use((error, req, res, next) => {
 });
 
 // Adding Code to update db at some time interval
-// nodeCron.schedule("0 */10 * * * *", async () => {
-// 	updateDatabase();
-// });
+nodeCron.schedule("0 */15 * * * *", async () => {
+	updateDatabase();
+});
 
 mongoose
 	.connect(
